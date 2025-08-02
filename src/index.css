@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+html, 
+body {
+
+  margin: 30px;
+  padding: 70px;
+  font-family: "Space Grotesk", sans-serif;
+  background: #c61a1a;
+  color: #e0e0c6ef;
+}
