@@ -3,9 +3,24 @@
 html, 
 body {
 
-  margin: 30px;
-  padding: 70px;
+  margin: 0px;
+  padding: 0px;
   font-family: "Space Grotesk", sans-serif;
-  background: #c61a1a;
+  background: #0a0a0a;
   color: #e0e0c6ef;
 }
+
+@layer utilities {
+  @keyframes loading {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(250%);
+    }
+  }
+
+    .animate-loading-bar {
+      animation: loading 0.8s ease infinite;
+    }
+  }
