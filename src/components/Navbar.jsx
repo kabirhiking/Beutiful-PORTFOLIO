@@ -17,6 +17,7 @@ export const Navbar =({ menuOpen, setMenuOpen }) => {
                   onClick={() => setMenuOpen((prev) => !prev)}
                 >
                   &#9776;
+                  {/* ☰ */}
                 </div>
 
                 <div className="hidden md:flex items-center space-x-8">
