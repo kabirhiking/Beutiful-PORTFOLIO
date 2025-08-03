@@ -1,5 +1,6 @@
-import { useEffect } from "react"
-export const Navbar =({ menuOpen, setMenuOpen }) => {
+import { useEffect } from "react";
+
+export const Navbar = ({ menuOpen, setMenuOpen }) => {
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "";
   }, [menuOpen]);
@@ -9,7 +10,7 @@ export const Navbar =({ menuOpen, setMenuOpen }) => {
             <div className="flex justify-between items-center h-16">
                 <a href="#home" className="font-mono text-xl font-bold text-white" >
                    {" "}
-                   kabir<span className="text-blue-500">.tech</span>{" "}
+                   kabir<span className="text-blue-500"></span>{" "}
                 </a>
 
                 <div
@@ -17,36 +18,35 @@ export const Navbar =({ menuOpen, setMenuOpen }) => {
                   onClick={() => setMenuOpen((prev) => !prev)}
                 >
                   &#9776;
-                  {/* ☰ */}
                 </div>
 
                 <div className="hidden md:flex items-center space-x-8">
                     <a 
                       href="#home" 
-                      className="text-gray-300 hove:tex-white transition-colors"
+                      className="text-gray-300 hove:text-white transition-colors"
                     >
                       {" "}
                       Home
                     </a>
 
                     <a 
-                      href="#About" 
-                      className="text-gray-300 hove:tex-white transition-colors"
+                      href="#about" 
+                      className="text-gray-300 hove:text-white transition-colors"
                     >
                       {" "}
                       About{" "}
                     </a>
 
                     <a 
-                      href="#Projects" 
-                      className="text-gray-300 hove:tex-white transition-colors"
+                      href="#projects" 
+                      className="text-gray-300 hove:text-white transition-colors"
                     >
                       {" "}
                       Projects{" "}
                     </a>
                     <a 
-                      href="#Contact" 
-                      className="text-gray-300 hove:tex-white transition-colors"
+                      href="#contact" 
+                      className="text-gray-300 hove:text-white transition-colors"
                     >
                       {" "}
                       Contact{" "}
