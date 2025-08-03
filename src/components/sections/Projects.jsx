@@ -1,9 +1,12 @@
+import { RevealOnScroll } from "../RevealOnScroll";
+
 export const Projects = () => {
     return (
     <section 
         id="projects" 
         className="min-h-screen flex items-center justify-center py-20" 
-    >
+    >  
+        <RevealOnScroll>
          <div className="max-w-5xl mx-auto px-4" >
             <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center"> 
                 {" "}
@@ -49,7 +52,7 @@ export const Projects = () => {
                         Built a modular RESTful API with FastAPI to manage users, products, carts, and orders using JWT
                         authentication.
                     </p>
-                    <div>
+                    <div className="">
                         {["FastAPI", "Python", "SQLAlchemy", "JWT authentication"].map((tech, key) => (
 
                         <span 
@@ -75,14 +78,15 @@ export const Projects = () => {
 
                 </div>
 
+                
                 <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba[59, 130, 246, 0.2]] transition">
                     <h3 className="text-xl font-bold mb-2" >AI Chat Log Summarizer </h3>
                     <p className="text-gray-400 mb-4" >
                         Implemented functionality to count total messages per speaker, extract top 5 keywords using frequency and
                         F-IDF, and generate summaries of single or multiple chat files.
                     </p>
-                    <div>
-                        {[ "Python", "AI"].map((tech, key) => (
+                    <div className="">
+                        {[ "Python", "AI", "CLI", "Panda"].map((tech, key) => (
 
                         <span 
                             key={key}
@@ -92,9 +96,9 @@ export const Projects = () => {
                             {tech}
                         </span>                       
                         ))}
-                        <div>
+                        <div className="flex flex-wrap gap-2 mb-4" >
                             <div className="flex justify-between items-center" >
-                                <a href="https://web-production-c09a8.up.railway.app/docs" 
+                                <a href="https://github.com/kabirhiking/chat_summarizer" 
                                 className="text-blue-400 hover:text-blue-300 transition-colors my-4 " 
                                 >
                                     {" "}
@@ -110,10 +114,10 @@ export const Projects = () => {
                 <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba[59, 130, 246, 0.2]] transition">
                     <h3 className="text-xl font-bold mb-2" >ToDo Web App </h3>
                     <p className="text-gray-400 mb-4" >
-                        users organize and manage tasks efficiently with features like adding, editing, and deleting tasks. 
+                        Users organize and manage tasks efficiently with features like adding, editing, and deleting tasks. 
                         It often includes priority settings, deadlines, and progress tracking for better productivity.
                     </p>
-                    <div>
+                    <div className="">
                         {["Django", "Python", "Using MVT"].map((tech, key) => (
 
                         <span 
@@ -141,9 +145,8 @@ export const Projects = () => {
 
             </div>
 
-         </div> 
-
-
+          </div> 
+        </RevealOnScroll>
     </section>
   );
 };
