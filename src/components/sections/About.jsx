@@ -1,3 +1,5 @@
+import { RevealOnScroll } from "../RevealOnScroll";
+
 export const About = () => {
     const frontendSkill = [
         "React", 
@@ -17,7 +19,8 @@ export const About = () => {
         <section 
             id="about" 
             className="min-h-screen flex items-center justify-center py-20" 
-        >
+        > 
+            <RevealOnScroll>
                 <div className="max-w-3xl mx-auto px-4">
                     <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center"> 
                         About Me
@@ -26,7 +29,8 @@ export const About = () => {
                     <div className="rounded-xl p-8 border-white/10 border hover:-translate-y-1 transition-all" >
                         <p>
                           Passionate developer with expertise in building scalable web
-                          applications and creating innovative solutions.
+                          applications and creating innovative solutions. I am constantly 
+                          seeking opportunities to learn, grow, and push the boundaries of what is possible.
                         </p>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -81,13 +85,13 @@ export const About = () => {
                         <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all" >
                             <h3 className="text-xl font-bold mb-4">️💼 Work Experience </h3>
                             <div className="space-y-4 text-gray-300" >
-                                <h4 className="font-semibold" > 
+                                {/* <h4 className="font-semibold" > 
                                     {" "}
                                     Software Engineer at RoxNor (- Present){" "}
                                 </h4>
                                 <p>
                                     Developed and maintained microservice for cloud-based applications.
-                                </p>
+                                </p> */}
                             
 
                              <div>
@@ -107,7 +111,8 @@ export const About = () => {
 
                     </div>
 
-                </div>                
+                </div>
+            </RevealOnScroll>                
         </section>
     );
 };
