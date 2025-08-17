@@ -12,6 +12,9 @@ function App() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
+  // Debug log
+  console.log('App component rendered, isLoaded:', isLoaded);
+
 
  
 
