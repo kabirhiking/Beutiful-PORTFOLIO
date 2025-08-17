@@ -3,14 +3,17 @@ FROM node:20-alpine AS build
 
 WORKDIR /app
 
+# Build argument for base path (default for Docker deployment)
+ARG BUILD_BASE_PATH="/"
+
 # Install dependencies
 COPY package*.json ./
 RUN npm install
 
 # Copy the full source and build it
 COPY . .
-# Build with base path set to root for Docker deployment
-RUN npm run build -- --base=/
+# Build with configurable base path
+RUN npm run build -- --base=${BUILD_BASE_PATH}
 
 # Step 2: Serve with Nginx
 FROM nginx:alpine

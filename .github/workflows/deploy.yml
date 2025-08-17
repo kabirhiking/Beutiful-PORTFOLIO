@@ -28,11 +28,11 @@ jobs:
     - name: Setup Docker Buildx
       uses: docker/setup-buildx-action@v3
       
-    - name: Build Docker image
+    - name: Build Docker image for GitHub Pages
       run: |
-        echo "Building Docker image..."
-        docker build -t portfolio-app .
-        echo "Docker image built successfully!"
+        echo "Building Docker image for GitHub Pages..."
+        docker build --build-arg BUILD_BASE_PATH="/Beutiful-PORTFOLIO/" -t portfolio-app .
+        echo "Docker image built successfully for GitHub Pages!"
         
     - name: Extract built files from Docker container
       run: |
@@ -78,6 +78,8 @@ jobs:
       with:
         context: .
         push: true
+        build-args: |
+          BUILD_BASE_PATH=/
         tags: |
           ghcr.io/${{ github.repository_owner }}/portfolio-app:latest
           ghcr.io/${{ github.repository_owner }}/portfolio-app:${{ github.sha }}
