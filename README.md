@@ -1,4 +1,4 @@
-# 🚀 Beautiful Portfolio - Dockerized React App
+# 🚀 MY Portfolio - Dockerized React App
 
 [![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge)](https://kabirhiking.github.io/Beutiful-PORTFOLIO)
 [![Docker](https://img.shields.io/badge/Docker-Ready-blue?style=for-the-badge&logo=docker)](https://github.com/kabirhiking/Beutiful-PORTFOLIO)
