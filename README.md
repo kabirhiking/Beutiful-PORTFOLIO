@@ -1,12 +1,13 @@
-# 🚀 MY Portfolio - Dockerized React App
+# 🚀 My Portfolio - Modern React Portfolio
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge)](https://kabirhiking.github.io/Beutiful-PORTFOLIO)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge)](https://my-portfolio-lake-six-87.vercel.app/)
+[![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://my-portfolio-lake-six-87.vercel.app/)
 [![Docker](https://img.shields.io/badge/Docker-Ready-blue?style=for-the-badge&logo=docker)](https://github.com/kabirhiking/Beutiful-PORTFOLIO)
 [![CI/CD](https://img.shields.io/badge/CI%2FCD-GitHub%20Actions-orange?style=for-the-badge&logo=github-actions)](https://github.com/kabirhiking/Beutiful-PORTFOLIO/actions)
 
-A modern, responsive personal portfolio built with React, Vite, and TailwindCSS. Features Docker containerization and GitHub Actions CI/CD.
+A modern, responsive personal portfolio built with React, Vite, and TailwindCSS. Features Docker containerization and deployed on Vercel.
 
-**🔗 [View Live Portfolio](https://kabirhiking.github.io/Beutiful-PORTFOLIO)**
+**🔗 [View Live Portfolio](https://my-portfolio-lake-six-87.vercel.app/)**
 
 ![Portfolio Preview](image.png)
 
@@ -23,11 +24,11 @@ A modern, responsive personal portfolio built with React, Vite, and TailwindCSS.
 
 ---
 
-## �️ Tech Stack
+## 🛠️ Tech Stack
 
 **Frontend:** React, Vite, TailwindCSS, JavaScript  
 **DevOps:** Docker, GitHub Actions, Nginx  
-**Deployment:** GitHub Pages, Container Registry  
+**Deployment:** Vercel, GitHub Pages, Container Registry  
 
 ---
 
@@ -46,6 +47,16 @@ npm run dev
 docker build -t portfolio-app .
 docker run -d -p 3000:80 --name portfolio-app portfolio-app
 ```
+
+### Deploy on Vercel
+1. Fork this repository
+2. Connect your GitHub account to [Vercel](https://vercel.com)
+3. Import your forked repository
+4. Set Environment Variables (if using EmailJS):
+   - `VITE_SERVICE_ID`
+   - `VITE_TEMPLATE_ID`
+   - `VITE_PUBLIC_KEY`
+5. Deploy! 🚀
 
 ---
 
@@ -118,7 +129,7 @@ docker logs portfolio-app
 ## 📞 Contact
 
 **GitHub:** [@kabirhiking](https://github.com/kabirhiking)  
-**Live Demo:** [kabirhiking.github.io/Beutiful-PORTFOLIO](https://kabirhiking.github.io/Beutiful-PORTFOLIO)
+**Live Portfolio:** [my-portfolio-lake-six-87.vercel.app](https://my-portfolio-lake-six-87.vercel.app/)
 
 ---
 
@@ -333,7 +344,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 **Project Link:** [https://github.com/kabirhiking/Beutiful-PORTFOLIO](https://github.com/kabirhiking/Beutiful-PORTFOLIO)
 
-**Live Demo:** [https://kabirhiking.github.io/Beutiful-PORTFOLIO](https://kabirhiking.github.io/Beutiful-PORTFOLIO)
+**Live Portfolio:** [https://my-portfolio-lake-six-87.vercel.app/](https://my-portfolio-lake-six-87.vercel.app/)
 
 ---
 
