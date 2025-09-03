@@ -6,7 +6,7 @@
 
 A modern, responsive personal portfolio built with React, Vite, and TailwindCSS. Features Docker containerization and GitHub Actions CI/CD.
 
-**🔗 [View Live Portfolio](https://kabirhiking.github.io/Beutiful-PORTFOLIO)**
+**🔗 [View Live Portfolio](https://my-portfolio-lake-six-87.vercel.app/)**
 
 ![Portfolio Preview](image.png)
 
