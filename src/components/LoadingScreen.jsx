@@ -5,8 +5,6 @@ export const LoadingScreen = ({ onComplete, onError }) => {
   const fullText = "<Hello />";
 
   useEffect(() => {
-    console.log('LoadingScreen mounted');
-    
     try {
       let index = 0;
       const interval = setInterval(() => {
@@ -17,14 +15,12 @@ export const LoadingScreen = ({ onComplete, onError }) => {
           clearInterval(interval);
 
           setTimeout(() => {
-            console.log('LoadingScreen completing');
             onComplete();
           }, 1000);
         }
       }, 100);
 
       return () => {
-        console.log('LoadingScreen cleanup');
         clearInterval(interval);
       };
     } catch (error) {
@@ -46,11 +42,6 @@ export const LoadingScreen = ({ onComplete, onError }) => {
 
       <div className="w-[200px] h-[2px] bg-gray-800 rounded relative overflow-hidden">
         <div className="w-[40%] h-full bg-blue-500 shadow-[0_0_15px_#3b82f6] animate-loading-bar"></div>
-      </div>
-      
-      {/* Debug info */}
-      <div className="mt-4 text-xs text-gray-500">
-        Loading... ({text.length}/{fullText.length})
       </div>
     </div>
   );

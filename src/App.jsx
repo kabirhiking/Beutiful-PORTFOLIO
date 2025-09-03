@@ -13,10 +13,6 @@ function App() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [loadingError, setLoadingError] = useState(null);
-
-  // Debug logs
-  console.log('App component rendered, isLoaded:', isLoaded);
-  console.log('Current pathname:', window.location.pathname);
   
   // Fallback: if loading takes too long, show the app anyway
   useState(() => {
@@ -31,7 +27,6 @@ function App() {
   }, [isLoaded]);
 
   const handleLoadingComplete = () => {
-    console.log('Loading completed');
     setIsLoaded(true);
   };
 

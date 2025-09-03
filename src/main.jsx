@@ -3,11 +3,6 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 
-// Debug logs for deployment troubleshooting
-console.log('main.jsx loaded');
-console.log('Current URL:', window.location.href);
-console.log('Base URL:', import.meta.env.BASE_URL);
-
 // Error boundary to catch React errors
 window.addEventListener('error', (event) => {
   console.error('Global error:', event.error);
@@ -23,17 +18,14 @@ try {
     throw new Error('Root element not found!');
   }
   
-  console.log('Root element found, creating React root...');
   const root = createRoot(rootElement);
   
-  console.log('Rendering App component...');
   root.render(
     <StrictMode>
       <App />
     </StrictMode>
   );
   
-  console.log('App rendered successfully!');
 } catch (error) {
   console.error('Failed to render app:', error);
   // Fallback: show error message in the DOM

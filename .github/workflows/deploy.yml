@@ -31,7 +31,7 @@ jobs:
     - name: Build Docker image for GitHub Pages
       run: |
         echo "Building Docker image for GitHub Pages..."
-        docker build --build-arg BUILD_BASE_PATH="/Beutiful-PORTFOLIO/" -t portfolio-app .
+        docker build --build-arg BUILD_BASE_PATH="/My-Portfolio/" -t portfolio-app .
         echo "Docker image built successfully for GitHub Pages!"
         
     - name: Extract built files from Docker container
@@ -86,5 +86,5 @@ jobs:
         labels: |
           org.opencontainers.image.title=Portfolio App
           org.opencontainers.image.description=Dockerized React Portfolio
-          org.opencontainers.image.url=https://${{ github.repository_owner }}.github.io/Beutiful-PORTFOLIO
+          org.opencontainers.image.url=https://${{ github.repository_owner }}.github.io/My-Portfolio
           org.opencontainers.image.source=https://github.com/${{ github.repository }}
