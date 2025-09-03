@@ -10,25 +10,14 @@ import { Projects } from "./components/sections/Projects";
 import { Contact } from "./components/sections/Contact";
 
 function App() {
-  const [isLoaded, setIsLoaded] = useState(false);
+  // Quick fix: Start with loaded=true for debugging
+  const [isLoaded, setIsLoaded] = useState(true); // Changed from false to true
   const [menuOpen, setMenuOpen] = useState(false);
   const [loadingError, setLoadingError] = useState(null);
 
   // Debug logs
   console.log('App component rendered, isLoaded:', isLoaded);
   console.log('Current pathname:', window.location.pathname);
-  
-  // Fallback: if loading takes too long, show the app anyway
-  useState(() => {
-    const fallbackTimer = setTimeout(() => {
-      if (!isLoaded) {
-        console.warn('Loading screen timeout, showing app anyway');
-        setIsLoaded(true);
-      }
-    }, 10000); // 10 second fallback
-
-    return () => clearTimeout(fallbackTimer);
-  }, [isLoaded]);
 
   const handleLoadingComplete = () => {
     console.log('Loading completed');
@@ -43,7 +32,8 @@ function App() {
 
   return (
     <>
-      {!isLoaded && (
+      {/* Temporarily disable loading screen for debugging */}
+      {false && !isLoaded && (
         <LoadingScreen 
           onComplete={handleLoadingComplete}
           onError={handleLoadingError}
@@ -59,6 +49,14 @@ function App() {
             Loading Warning: {loadingError.message}
           </div>
         )}
+        
+        {/* Debug info */}
+        <div className="fixed bottom-4 right-4 bg-gray-800 text-xs p-2 rounded z-50">
+          URL: {window.location.pathname}<br/>
+          Loaded: {isLoaded ? 'Yes' : 'No'}<br/>
+          Time: {new Date().toLocaleTimeString()}
+        </div>
+        
         <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <Home />

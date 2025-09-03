@@ -3,9 +3,45 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 
-// Debug log
+// Debug logs for deployment troubleshooting
 console.log('main.jsx loaded');
+console.log('Current URL:', window.location.href);
+console.log('Base URL:', import.meta.env.BASE_URL);
 
-createRoot(document.getElementById('root')).render(
-  <App />
-)
+// Error boundary to catch React errors
+window.addEventListener('error', (event) => {
+  console.error('Global error:', event.error);
+});
+
+window.addEventListener('unhandledrejection', (event) => {
+  console.error('Unhandled promise rejection:', event.reason);
+});
+
+try {
+  const rootElement = document.getElementById('root');
+  if (!rootElement) {
+    throw new Error('Root element not found!');
+  }
+  
+  console.log('Root element found, creating React root...');
+  const root = createRoot(rootElement);
+  
+  console.log('Rendering App component...');
+  root.render(
+    <StrictMode>
+      <App />
+    </StrictMode>
+  );
+  
+  console.log('App rendered successfully!');
+} catch (error) {
+  console.error('Failed to render app:', error);
+  // Fallback: show error message in the DOM
+  document.body.innerHTML = `
+    <div style="color: red; padding: 20px; font-family: Arial, sans-serif;">
+      <h1>App Failed to Load</h1>
+      <p>Error: ${error.message}</p>
+      <p>Check the browser console for more details.</p>
+    </div>
+  `;
+}
